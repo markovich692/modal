@@ -17,6 +17,11 @@ closeModal.addEventListener('click', function () {
   modal.classList.add('hidden');
 });
 
+overlay.addEventListener('click', function () {
+  overlay.classList.add('hidden');
+  modal.classList.add('hidden');
+});
+
 // for (let i = 0; i < showModal.length; i++) {
 //   showModal[i].addEventListener('click', function () {
 //     console.log(showModal[i]);
