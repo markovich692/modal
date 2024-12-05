@@ -4,6 +4,10 @@ const showModal = document.querySelectorAll('.show-modal');
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const closeModal = document.querySelector('.close-modal');
+const functionCloseModal = function () {
+  overlay.classList.add('hidden');
+  modal.classList.add('hidden');
+};
 
 for (let i = 0; i < showModal.length; i++) {
   showModal[i].addEventListener('click', function () {
@@ -12,15 +16,9 @@ for (let i = 0; i < showModal.length; i++) {
   });
 }
 
-closeModal.addEventListener('click', function () {
-  overlay.classList.add('hidden');
-  modal.classList.add('hidden');
-});
+closeModal.addEventListener('click', functionCloseModal);
 
-overlay.addEventListener('click', function () {
-  overlay.classList.add('hidden');
-  modal.classList.add('hidden');
-});
+overlay.addEventListener('click', functionCloseModal);
 
 // for (let i = 0; i < showModal.length; i++) {
 //   showModal[i].addEventListener('click', function () {
